@@ -20,7 +20,7 @@ namespace SchoolPractice
 
         }
 
-        public Student(string name): this(name, 0, 0){ }
+        public Student(string name): this(name, 0, 0){  }
         
     }
 }
