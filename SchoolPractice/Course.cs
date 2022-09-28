@@ -1,26 +1,20 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Text;
 
 namespace SchoolPractice
 {
-    internal class Course
+    public class Course
     {
-        public string Name { get; set; }
-        public string Teacher { get; set; }
-        public List<Student> EnrolledStudents { get; set; } 
-        
-        public Course(string name, string teacher)
-        {
-            Name = name;
-            Teacher = teacher;
-            EnrolledStudents = new List<Student>();
-        }
+        public string Topic { get; set; }
+        public Teacher Instructor { get; set; }
+        public List<Student> enrolledStudents { get; set; }
 
-        public void AddStudent(Student s)
-        {
-            EnrolledStudents.Add(s);
-        }
+
+        // TODO: Add your custom 'ToString' method here. Make sure it returns a well-formatted string rather than
+        //  just the class fields.
+
+
+        // TODO: Add your custom 'Equals' method here. Consider which fields should match in order to call two
+        //  Course objects equal.
     }
-
 }
