@@ -24,7 +24,7 @@ namespace SchoolPractice
             nextStudentId++;
         }
 
-        // TODO: Complete the AddGrade method.
+        // Complete the AddGrade method.
         public void AddGrade(int courseCredits, double grade)
         {
             // QtyScore before the course
@@ -62,7 +62,7 @@ namespace SchoolPractice
         // custom 'ToString' method returns a well-formatted string rather than just the class fields.
         public override string ToString()
         {
-            return Name + " (Credits: " + NumberOfCredits + ", GPA: " + Gpa + ")";
+            return Name + "(Student ID: " + StudentId + ", Credits: " + NumberOfCredits + ", GPA: " + Gpa + ")";
         }
 
         // custom 'Equals' and "GetHashCode" methods
