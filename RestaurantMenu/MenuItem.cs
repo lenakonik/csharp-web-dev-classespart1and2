@@ -25,5 +25,14 @@ namespace RestaurantMenu
             IsNew = isNew;
         }
 
+        public override string ToString()
+        {
+            return Name + ". " + Description + ". Price: $" + Price + ".";
+        }
+
+        // A way to tell if a menu item is new
+
+        // A way to determine whether or not two menu items are equal
+
     }
 }
