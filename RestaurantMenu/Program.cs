@@ -17,8 +17,8 @@ namespace RestaurantMenu
             menu.Add(pizza);
             menu.Add(margarita);
 
-            bool another = true;
-            while (another)
+            bool hasItemToAdd = true;
+            while (hasItemToAdd)
             {
                 Console.WriteLine("Menu item name: ");
                 string name = Console.ReadLine();
@@ -34,7 +34,7 @@ namespace RestaurantMenu
                 input = Console.ReadLine();
                 Category cat = (Category)Enum.Parse(typeof(Category), input, true);
 
-                MenuItem i = new MenuItem(name, price, description, Category.MainCourse);
+                MenuItem i = new MenuItem(name, price, description, cat);
                 // if we were able to add item, print it
                 if (menu.Add(i))
                 {
@@ -42,7 +42,7 @@ namespace RestaurantMenu
                 }
                 Console.WriteLine("Do you want to add another item? y n");
                 input = Console.ReadLine();
-                another = (input.Equals("y")) ? true : false;
+                hasItemToAdd = input.Equals("y");
 
             }
 
