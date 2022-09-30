@@ -7,7 +7,8 @@ namespace RestaurantMenu
 {
     internal class Menu
     {
-        public static List<MenuItem> Items { get; set; }
+        public List<MenuItem> Items { get; set; }
+        // A way to tell when the menu was last updated
         public DateTime DateModified { get; set; }
 
         public Menu(DateTime time)
@@ -16,7 +17,7 @@ namespace RestaurantMenu
             DateModified = time;
         }
 
-        public Menu(): this(DateTime.Now){}
+        public Menu(): this(DateTime.Today){}
 
 
         // A way to add and remove menu items from the menu
@@ -29,13 +30,6 @@ namespace RestaurantMenu
         {
             string itemName = i.Name;
             Items.RemoveAll(i => i.Name == itemName);
-        }
-
-
-        // A way to tell when the menu was last updated
-        public static void GetUpdateDate()
-        {
-           Console.WriteLine(DateModified);
         }
 
         // A way to print out both a single menu item as well as the entire menu
