@@ -21,9 +21,19 @@ namespace RestaurantMenu
 
 
         // A way to add and remove menu items from the menu
-        public void Add(MenuItem i)
+        public bool Add(MenuItem i)
         {
+            foreach (MenuItem x in Items)
+            {
+                if (i.Equals(x))
+                {
+                    Console.WriteLine("This item already exists.");
+                    return false;
+                }
+            }
+
             Items.Add(i);
+            return true;
         }
 
         public void Remove(MenuItem i)

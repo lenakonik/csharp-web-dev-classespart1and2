@@ -28,7 +28,7 @@ namespace RestaurantMenu
 
         public override string ToString()
         {
-            return Name + ". " + Description + ". Price: $" + Price + ".";
+            return Name + ". " + Description + ". Price: $" + Price + ". Category: " + Category + ".";
         }
 
         // A way to tell if a menu item is new - if added more than a week ago it is not new anymore
