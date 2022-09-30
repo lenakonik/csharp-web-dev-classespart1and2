@@ -42,7 +42,7 @@ namespace RestaurantMenu
                 }
                 Console.WriteLine("Do you want to add another item? y n");
                 input = Console.ReadLine();
-                another = (input == "y") ? true : false;
+                another = (input.Equals("y")) ? true : false;
 
             }
 
